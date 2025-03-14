@@ -77,8 +77,13 @@ public class Persona {
         this.edad = edad;
     }
     
+    /**
+     * Añadimos comprobarSexo() para que no intoduzcan resuyltados erroneos
+     * @param sexo
+     */
     public void setSexo(char sexo) {
         this.sexo = sexo;
+        comprobarSexo();
     }
 
     public void setPeso(double peso) {
@@ -97,7 +102,27 @@ public class Persona {
 		return this.DNI;
 	}
     
-    /**
+    public String getNombre() {
+		return nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public char getSexo() {
+		return sexo;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	/**
      * He añadido una ternaria para especificar, y aclarar, el peso debe ir en metros, no en centimetros 
      * @return
      */
